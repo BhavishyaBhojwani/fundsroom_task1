@@ -11,6 +11,7 @@
 <link href="assets/css/responsive.css" rel="stylesheet">
 <link href="assets/css/property-tabs.css" rel="stylesheet">
 <link href="assets/css/favourites.css" rel="stylesheet">
+<link href="assets/css/emi-calculator.css" rel="stylesheet">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -190,6 +191,17 @@
 			<div class="banner-one_content">
 				<div class="banner-one_content-inner">
 					<h1 class="banner-one_heading">Discover Next Perfect <span>Property</span> on Palace.</h1>
+					
+					<!-- EMI Calculator Button -->
+					<div class="emi-calculator-trigger" style="margin-top: 30px;">
+						<button class="theme-btn btn-style-one" id="openEmiCalculator">
+							<span class="btn-wrap">
+								<span class="text-one"><i class="fa fa-calculator"></i> Calculate EMI</span>
+								<span class="text-two"><i class="fa fa-calculator"></i> Calculate EMI</span>
+							</span>
+						</button>
+					</div>
+					
 					<!-- Banner Tabs -->
 					<!-- <div class="banner-tabs">
 						
@@ -1549,6 +1561,7 @@
 <script src="assets/js/element-in-view.js"></script>
 <script src="assets/js/favourites.js"></script>
 <script src="assets/js/property-tabs.js"></script>
+<script src="assets/js/emi-calculator.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -1601,6 +1614,78 @@
         });
       });
     </script>
+
+<!-- EMI Calculator Slide-in Panel -->
+<div class="emi-calculator-panel" id="emiCalculatorPanel">
+	<div class="emi-calculator-overlay" id="emiCalculatorOverlay"></div>
+	<div class="emi-calculator-content">
+		<div class="emi-calculator-header">
+			<h3><i class="fa fa-calculator"></i> EMI Calculator</h3>
+			<button class="emi-close-btn" id="closeEmiCalculator">
+				<i class="fa fa-times"></i>
+			</button>
+		</div>
+		
+		<div class="emi-calculator-body">
+			<form id="emiCalculatorForm">
+				
+				<!-- Property Price -->
+				<div class="emi-form-group">
+					<label for="propertyPrice">Property Price (₹)</label>
+					<input type="number" id="propertyPrice" class="emi-input" placeholder="Enter property price" value="5000000" min="100000" step="100000">
+					<div class="emi-value-display">₹ <span id="propertyPriceDisplay">50,00,000</span></div>
+				</div>
+				
+				<!-- Loan Percentage -->
+				<div class="emi-form-group">
+					<label for="loanPercentage">Loan Amount (%)</label>
+					<input type="range" id="loanPercentage" class="emi-slider" min="10" max="90" value="80" step="5">
+					<div class="emi-value-display"><span id="loanPercentageDisplay">80</span>%</div>
+				</div>
+				
+				<!-- Interest Rate -->
+				<div class="emi-form-group">
+					<label for="interestRate">Interest Rate (% per annum)</label>
+					<input type="range" id="interestRate" class="emi-slider" min="6" max="15" value="8.5" step="0.1">
+					<div class="emi-value-display"><span id="interestRateDisplay">8.5</span>%</div>
+				</div>
+				
+				<!-- Tenure -->
+				<div class="emi-form-group">
+					<label for="tenure">Loan Tenure (Years)</label>
+					<input type="range" id="tenure" class="emi-slider" min="1" max="30" value="20" step="1">
+					<div class="emi-value-display"><span id="tenureDisplay">20</span> Years</div>
+				</div>
+				
+				<!-- Calculate Button -->
+				<button type="button" class="emi-calculate-btn" id="calculateEmiBtn">
+					<i class="fa fa-calculator"></i> Calculate EMI
+				</button>
+			</form>
+			
+			<!-- EMI Result -->
+			<div class="emi-result" id="emiResult" style="display: none;">
+				<h4>Your Monthly EMI</h4>
+				<div class="emi-amount">₹ <span id="emiAmount">0</span></div>
+				
+				<div class="emi-breakdown">
+					<div class="emi-breakdown-item">
+						<span class="emi-label">Loan Amount:</span>
+						<span class="emi-value">₹ <span id="loanAmount">0</span></span>
+					</div>
+					<div class="emi-breakdown-item">
+						<span class="emi-label">Total Interest:</span>
+						<span class="emi-value">₹ <span id="totalInterest">0</span></span>
+					</div>
+					<div class="emi-breakdown-item">
+						<span class="emi-label">Total Amount:</span>
+						<span class="emi-value">₹ <span id="totalAmount">0</span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

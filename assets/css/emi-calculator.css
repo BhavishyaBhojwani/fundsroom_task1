@@ -1,0 +1,310 @@
+/* EMI Calculator Styles */
+
+/* Slide-in Panel */
+.emi-calculator-panel {
+	position: fixed;
+	top: 0;
+	right: -450px;
+	width: 450px;
+	height: 100vh;
+	z-index: 99999;
+	transition: right 0.4s ease;
+}
+
+.emi-calculator-panel.active {
+	right: 0;
+}
+
+/* Overlay */
+.emi-calculator-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+	z-index: -1;
+}
+
+.emi-calculator-panel.active .emi-calculator-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Content */
+.emi-calculator-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+
+/* Header */
+.emi-calculator-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 30px;
+	background: linear-gradient(135deg, var(--main-color) 0%, #c71c22 100%);
+	color: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.emi-calculator-header h3 {
+	margin: 0;
+	font-size: 22px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.emi-calculator-header h3 i {
+	font-size: 24px;
+}
+
+.emi-close-btn {
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.emi-close-btn:hover {
+	background: rgba(255, 255, 255, 0.3);
+	transform: rotate(90deg);
+}
+
+/* Body */
+.emi-calculator-body {
+	flex: 1;
+	padding: 30px;
+	overflow-y: auto;
+}
+
+/* Form Groups */
+.emi-form-group {
+	margin-bottom: 30px;
+}
+
+.emi-form-group label {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--color-two);
+}
+
+/* Input */
+.emi-input {
+	width: 100%;
+	padding: 12px 15px;
+	border: 2px solid #e0e0e0;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: all 0.3s ease;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.emi-input:focus {
+	outline: none;
+	border-color: var(--main-color);
+	box-shadow: 0 0 0 3px rgba(235, 32, 39, 0.1);
+}
+
+/* Slider */
+.emi-slider {
+	width: 100%;
+	height: 6px;
+	border-radius: 5px;
+	background: #e0e0e0;
+	outline: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.emi-slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--main-color);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.emi-slider::-webkit-slider-thumb:hover {
+	transform: scale(1.2);
+	box-shadow: 0 0 0 8px rgba(235, 32, 39, 0.1);
+}
+
+.emi-slider::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--main-color);
+	cursor: pointer;
+	border: none;
+	transition: all 0.3s ease;
+}
+
+.emi-slider::-moz-range-thumb:hover {
+	transform: scale(1.2);
+	box-shadow: 0 0 0 8px rgba(235, 32, 39, 0.1);
+}
+
+/* Value Display */
+.emi-value-display {
+	margin-top: 8px;
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--main-color);
+	text-align: right;
+}
+
+/* Calculate Button */
+.emi-calculate-btn {
+	width: 100%;
+	padding: 15px;
+	background: linear-gradient(135deg, var(--main-color) 0%, #c71c22 100%);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 20px;
+	box-shadow: 0 4px 15px rgba(235, 32, 39, 0.3);
+}
+
+.emi-calculate-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(235, 32, 39, 0.4);
+}
+
+.emi-calculate-btn i {
+	font-size: 20px;
+}
+
+/* Result Section */
+.emi-result {
+	margin-top: 30px;
+	padding: 25px;
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	border-radius: 12px;
+	border-left: 4px solid var(--main-color);
+}
+
+.emi-result h4 {
+	margin: 0 0 15px 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: #666;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.emi-amount {
+	font-size: 36px;
+	font-weight: 800;
+	color: var(--main-color);
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* Breakdown */
+.emi-breakdown {
+	border-top: 2px solid #dee2e6;
+	padding-top: 15px;
+}
+
+.emi-breakdown-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid #dee2e6;
+}
+
+.emi-breakdown-item:last-child {
+	border-bottom: none;
+	font-weight: 700;
+	color: var(--color-two);
+}
+
+.emi-label {
+	font-size: 15px;
+	color: #666;
+}
+
+.emi-value {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--color-two);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.emi-calculator-panel {
+		right: -100%;
+		width: 100%;
+	}
+	
+	.emi-calculator-panel.active {
+		right: 0;
+	}
+	
+	.emi-calculator-header {
+		padding: 20px;
+	}
+	
+	.emi-calculator-header h3 {
+		font-size: 20px;
+	}
+	
+	.emi-calculator-body {
+		padding: 20px;
+	}
+	
+	.emi-amount {
+		font-size: 32px;
+	}
+}
+
+/* Scrollbar Styling */
+.emi-calculator-body::-webkit-scrollbar {
+	width: 6px;
+}
+
+.emi-calculator-body::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+.emi-calculator-body::-webkit-scrollbar-thumb {
+	background: var(--main-color);
+	border-radius: 3px;
+}
+
+.emi-calculator-body::-webkit-scrollbar-thumb:hover {
+	background: #c71c22;
+}
