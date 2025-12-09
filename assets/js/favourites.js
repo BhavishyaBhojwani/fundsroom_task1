@@ -14,7 +14,7 @@
 			bathrooms: '4 Bathrooms',
 			area: '1257 sq.ft',
 			image: 'assets/images/resource/property1.jpeg',
-			detailPage: 'property-detail_01.html',
+			detailPage: 'property.html',
 			tag: 'Newly Launched',
 			type: 'residential'
 		},
@@ -28,7 +28,7 @@
 			bathrooms: '2 Bathrooms',
 			area: '5000 sq.ft',
 			image: 'assets/images/resource/property2.jpg',
-			detailPage: 'property-detail_02.html',
+			detailPage: 'property.html',
 			tag: 'Coming Soon',
 			type: 'residential'
 		},
@@ -42,7 +42,7 @@
 			bathrooms: '2 Bathrooms',
 			area: '3818 sq.ft',
 			image: 'assets/images/resource/property3.jpg',
-			detailPage: 'property-detail_03.html',
+			detailPage: 'property.html',
 			tag: 'Newly Launched',
 			type: 'residential'
 		},
@@ -56,7 +56,7 @@
 			bathrooms: '10 Parking',
 			area: '50 Capacity',
 			image: 'assets/images/resource/property4.jpg',
-			detailPage: 'property-detail_04.html',
+			detailPage: 'property.html',
 			tag: 'Featured',
 			type: 'commercial'
 		},
@@ -70,7 +70,7 @@
 			bathrooms: 'Retail',
 			area: 'Parking',
 			image: 'assets/images/resource/property5.jpg',
-			detailPage: 'property-detail_05.html',
+			detailPage: 'property.html',
 			tag: 'Featured',
 			discount: '20% off',
 			type: 'commercial'
@@ -85,7 +85,7 @@
 			bathrooms: 'Warehouse',
 			area: 'Loading Bay',
 			image: 'assets/images/resource/property6.jpg',
-			detailPage: 'property-detail_06.html',
+			detailPage: 'property.html',
 			tag: 'Featured',
 			type: 'commercial'
 		}
