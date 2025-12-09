@@ -9,6 +9,8 @@
 <link href="assets/css/bootstrap.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="assets/css/responsive.css" rel="stylesheet">
+<link href="assets/css/property-tabs.css" rel="stylesheet">
+<link href="assets/css/favourites.css" rel="stylesheet">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -121,7 +123,7 @@
 												<li><a href="not-found.html">Not Found</a></li>
 											</ul> -->
 										</li>
-										<li><a href="contact.html">Contact</a></li>
+										<li><a href="favourites.html">Favourites</a></li>
 									</ul>
 								</div>
 							</nav>
@@ -586,84 +588,178 @@
 	<!-- End App One -->
 	
 	<!-- Property One -->
-	<section class="property-one">
+	<section class="property-one property-categories">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title centered">
 				<div class="sec-title_title">Latest Properties</div>
 				<h2 class="sec-title_heading">Explore Featured <br> Properties</h2>
 			</div>
-			<div class="row clearfix">
+			
+			<!-- Property Category Tabs -->
+			<div class="property-category-tabs">
+				<div class="category-tabs-buttons">
+					<button class="category-tab-btn active" data-category="residential">
+						<i class="fa fa-home"></i>
+						<span>RESIDENTIAL</span>
+					</button>
+					<button class="category-tab-btn" data-category="commercial">
+						<i class="fa fa-building"></i>
+						<span>COMMERCIAL</span>
+					</button>
+				</div>
 				
-				<!-- Property Block One -->
-				<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
-					<div class="property-block_one-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="property-block_one-image">
-							<div class="property-block_one-title">Featuerd</div>
-							<a href="property-detail.html"><img src="assets/images/resource/property1.jpeg" alt="" /></a>
-						</div>
-						<div class="property-block_one-content">
-							<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>Pasadena 809b-2, Oklahoma</div>
-							<h4 class="property-block_one-heading"><a href="property-detail.html">Super deluxe bed room near sea beech</a></h4>
-							<ul class="property-block_one-info">
-								<li><span><img src="assets/images/icons/bed.svg" alt="" /></span>4 Beds</li>
-								<li><span><img src="assets/images/icons/bath.svg" alt="" /></span>2 Bathrooms</li>
-								<li><span><img src="assets/images/icons/square.svg" alt="" /></span>6x8 m²</li>
-							</ul>
-							<div class="d-flex justify-content-between align-items-center flex-wrap">
-								<div class="property-block_one-price">$2,400 <span>/month</span></div>
-								<a class="property-block_one-heart"><img src="assets/images/icons/heart.svg" alt="" /></a>
+				<!-- Residential Properties Tab -->
+				<div class="category-tab-content active" id="residential">
+					<div class="row clearfix">
+						
+						<!-- Residential Property 1 - Villa -->
+						<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
+							<div class="property-block_one-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+								<div class="property-block_one-image">
+									<div class="property-block_one-title">Newly Launched</div>
+									<a href="property-detail_01.html"><img src="assets/images/resource/property1.jpeg" alt="" /></a>
+								</div>
+								<div class="property-block_one-content">
+									<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>NR Navrachana University, Bhayli</div>
+									<h4 class="property-block_one-heading"><a href="property-detail_01.html">4BHK Perfectly Crafted Villas</a></h4>
+									<ul class="property-block_one-info">
+										<li><span><img src="assets/images/icons/bed.svg" alt="" /></span>4 Beds</li>
+										<li><span><img src="assets/images/icons/bath.svg" alt="" /></span>4 Bathrooms</li>
+										<li><span><img src="assets/images/icons/square.svg" alt="" /></span>1257 sq.ft</li>
+									</ul>
+									<div class="d-flex justify-content-between align-items-center flex-wrap">
+										<div class="property-block_one-price">Contact <span>for price</span></div>
+										<a class="property-block_one-heart" data-property-id="property1"><img src="assets/images/icons/heart.svg" alt="" /></a>
+									</div>
+								</div>
 							</div>
 						</div>
+						
+						<!-- Residential Property 2 - Apartment -->
+						<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
+							<div class="property-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+								<div class="property-block_one-image">
+									<div class="property-block_one-title">Coming Soon</div>
+									<a href="property-detail_02.html"><img src="assets/images/resource/property2.jpg" alt="" /></a>
+								</div>
+								<div class="property-block_one-content">
+									<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>New Alkapuri, Vadodara</div>
+									<h4 class="property-block_one-heading"><a href="property-detail_02.html">4BR 2H 2K Garden Apartments</a></h4>
+									<ul class="property-block_one-info">
+										<li><span><img src="assets/images/icons/bed.svg" alt="" /></span>4 Beds</li>
+										<li><span><img src="assets/images/icons/bath.svg" alt="" /></span>2 Bathrooms</li>
+										<li><span><img src="assets/images/icons/square.svg" alt="" /></span>5000 sq.ft</li>
+									</ul>
+									<div class="d-flex justify-content-between align-items-center flex-wrap">
+										<div class="property-block_one-price">Contact <span>for price</span></div>
+										<a class="property-block_one-heart" data-property-id="property2"><img src="assets/images/icons/heart.svg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Residential Property 3 - Penthouse -->
+						<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
+							<div class="property-block_one-inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+								<div class="property-block_one-image">
+									<div class="property-block_one-title">Newly Launched</div>
+									<a href="property-detail_03.html"><img src="assets/images/resource/property3.jpg" alt="" /></a>
+								</div>
+								<div class="property-block_one-content">
+									<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>75 MTR. Main Road, Bhayli</div>
+									<h4 class="property-block_one-heading"><a href="property-detail_03.html">4B2HK Flats & 5B2HK Penthouses</a></h4>
+									<ul class="property-block_one-info">
+										<li><span><img src="assets/images/icons/bed.svg" alt="" /></span>4 Beds</li>
+										<li><span><img src="assets/images/icons/bath.svg" alt="" /></span>2 Bathrooms</li>
+										<li><span><img src="assets/images/icons/square.svg" alt="" /></span>3818 sq.ft</li>
+									</ul>
+									<div class="d-flex justify-content-between align-items-center flex-wrap">
+										<div class="property-block_one-price">Contact <span>for price</span></div>
+										<a class="property-block_one-heart" data-property-id="property3"><img src="assets/images/icons/heart.svg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 				
-				<!-- Property Block One -->
-				<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
-					<div class="property-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="property-block_one-image">
-							<div class="property-block_one-off">20% off</div>
-							<a href="property-detail.html"><img src="assets/images/resource/property2.jpg" alt="" /></a>
-						</div>
-						<div class="property-block_one-content">
-							<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>Pasadena 809b-2, Oklahoma</div>
-							<h4 class="property-block_one-heading"><a href="property-detail.html">Super deluxe bed room near sea beech</a></h4>
-							<ul class="property-block_one-info">
-								<li><span><img src="assets/images/icons/bed.svg" alt="" /></span>4 Beds</li>
-								<li><span><img src="assets/images/icons/bath.svg" alt="" /></span>2 Bathrooms</li>
-								<li><span><img src="assets/images/icons/square.svg" alt="" /></span>6x8 m²</li>
-							</ul>
-							<div class="d-flex justify-content-between align-items-center flex-wrap">
-								<div class="property-block_one-price">$2,400 <span>/month</span></div>
-								<a class="property-block_one-heart"><img src="assets/images/icons/heart.svg" alt="" /></a>
+				<!-- Commercial Properties Tab -->
+				<div class="category-tab-content" id="commercial">
+					<div class="row clearfix">
+						
+						<!-- Commercial Property 1 - Office -->
+						<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
+							<div class="property-block_one-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+								<div class="property-block_one-image">
+									<div class="property-block_one-title">Featured</div>
+									<a href="property-detail_04.html"><img src="assets/images/resource/property4.jpg" alt="" /></a>
+								</div>
+								<div class="property-block_one-content">
+									<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>Business District, Downtown</div>
+									<h4 class="property-block_one-heading"><a href="property-detail_04.html">Modern Office Space with Parking</a></h4>
+									<ul class="property-block_one-info">
+										<li><span><img src="assets/images/icons/square.svg" alt="" /></span>2500 sq.ft</li>
+										<li><span><i class="fa fa-car"></i></span>10 Parking</li>
+										<li><span><i class="fa fa-users"></i></span>50 Capacity</li>
+									</ul>
+									<div class="d-flex justify-content-between align-items-center flex-wrap">
+										<div class="property-block_one-price">$5,000 <span>/month</span></div>
+										<a class="property-block_one-heart" data-property-id="property4"><img src="assets/images/icons/heart.svg" alt="" /></a>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				
-				<!-- Property Block One -->
-				<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
-					<div class="property-block_one-inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="property-block_one-image">
-							<div class="property-block_one-title">Featuerd</div>
-							<a href="property-detail.html"><img src="assets/images/resource/property3.jpg" alt="" /></a>
-						</div>
-						<div class="property-block_one-content">
-							<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>Pasadena 809b-2, Oklahoma</div>
-							<h4 class="property-block_one-heading"><a href="property-detail.html">Super deluxe bed room near sea beech</a></h4>
-							<ul class="property-block_one-info">
-								<li><span><img src="assets/images/icons/bed.svg" alt="" /></span>4 Beds</li>
-								<li><span><img src="assets/images/icons/bath.svg" alt="" /></span>2 Bathrooms</li>
-								<li><span><img src="assets/images/icons/square.svg" alt="" /></span>6x8 m²</li>
-							</ul>
-							<div class="d-flex justify-content-between align-items-center flex-wrap">
-								<div class="property-block_one-price">$2,400 <span>/month</span></div>
-								<a class="property-block_one-heart"><img src="assets/images/icons/heart.svg" alt="" /></a>
+						
+						<!-- Commercial Property 2 - Shop -->
+						<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
+							<div class="property-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+								<div class="property-block_one-image">
+									<div class="property-block_one-off">20% off</div>
+									<a href="property-detail_05.html"><img src="assets/images/resource/property5.jpg" alt="" /></a>
+								</div>
+								<div class="property-block_one-content">
+									<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>Shopping Mall, City Center</div>
+									<h4 class="property-block_one-heading"><a href="property-detail_05.html">Prime Retail Shop in Mall</a></h4>
+									<ul class="property-block_one-info">
+										<li><span><img src="assets/images/icons/square.svg" alt="" /></span>800 sq.ft</li>
+										<li><span><i class="fa fa-store"></i></span>Retail</li>
+										<li><span><i class="fa fa-parking"></i></span>Parking</li>
+									</ul>
+									<div class="d-flex justify-content-between align-items-center flex-wrap">
+										<div class="property-block_one-price">$3,200 <span>/month</span></div>
+										<a class="property-block_one-heart" data-property-id="property5"><img src="assets/images/icons/heart.svg" alt="" /></a>
+									</div>
+								</div>
 							</div>
 						</div>
+						
+						<!-- Commercial Property 3 - Warehouse -->
+						<div class="property-block_one col-lg-4 col-md-6 col-sm-12">
+							<div class="property-block_one-inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+								<div class="property-block_one-image">
+									<div class="property-block_one-title">Featured</div>
+									<a href="property-detail_06.html"><img src="assets/images/resource/property6.jpg" alt="" /></a>
+								</div>
+								<div class="property-block_one-content">
+									<div class="property-block_one-location"><i class="flaticon-maps-and-flags"></i>Industrial Area, East Side</div>
+									<h4 class="property-block_one-heading"><a href="property-detail_06.html">Large Warehouse with Loading Bay</a></h4>
+									<ul class="property-block_one-info">
+										<li><span><img src="assets/images/icons/square.svg" alt="" /></span>10000 sq.ft</li>
+										<li><span><i class="fa fa-warehouse"></i></span>Warehouse</li>
+										<li><span><i class="fa fa-truck"></i></span>Loading Bay</li>
+									</ul>
+									<div class="d-flex justify-content-between align-items-center flex-wrap">
+										<div class="property-block_one-price">$8,500 <span>/month</span></div>
+										<a class="property-block_one-heart" data-property-id="property6"><img src="assets/images/icons/heart.svg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
 					</div>
 				</div>
-				
 			</div>
 			
 			<!-- Header Button Box -->
@@ -1451,6 +1547,8 @@
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/jquery.countdown.js"></script>
 <script src="assets/js/element-in-view.js"></script>
+<script src="assets/js/favourites.js"></script>
+<script src="assets/js/property-tabs.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>

@@ -1017,11 +1017,14 @@
 	overflow:hidden;
 	border-radius:16px;
 	background-color:var(--main-color);
+	height:280px;
 }
 
 .property-block_one-image img{
 	position:relative;
 	width:100%;
+	height:100%;
+	object-fit:cover;
 	display:block;
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
@@ -1172,10 +1175,10 @@
 
 .property-block_one-heart{
 	position:relative;
-	width:46px;
-	height:46px;
-	line-height:38px;
-	font-size:18px;
+	width:50px;
+	height:50px;
+	line-height:44px;
+	font-size:20px;
 	font-weight:600;
 	text-align:center;
 	border-radius:50px;
