@@ -159,6 +159,50 @@
 		<div class="auto-container">
 			<div class="row clearfix">
 				
+				<!-- Filter Sidebar -->
+				<div class="col-lg-3 col-md-12 col-sm-12">
+					<div class="property-filter-sidebar">
+						<h3 class="filter-title">Filters</h3>
+						
+						<!-- Price Range Filter -->
+						<div class="filter-widget">
+							<h4>Price Range</h4>
+							<div class="price-range-slider">
+								<input type="range" id="priceRange" min="0" max="5000000" value="5000000" step="50000">
+								<div class="price-display">₹0 - <span id="priceValue">₹50 Lakh</span></div>
+							</div>
+						</div>
+						
+						<!-- Bedrooms Filter -->
+						<div class="filter-widget">
+							<h4>Bedrooms</h4>
+							<select id="bedroomsFilter" class="filter-select">
+								<option value="">Any</option>
+								<option value="1">1 Bed</option>
+								<option value="2">2 Beds</option>
+								<option value="3">3 Beds</option>
+								<option value="4">4+ Beds</option>
+							</select>
+						</div>
+						
+						<!-- Location Filter -->
+						<div class="filter-widget">
+							<h4>Location</h4>
+							<input type="text" id="locationFilter" class="filter-input" placeholder="Search location...">
+						</div>
+						
+						<!-- Filter Buttons -->
+						<div class="filter-buttons">
+							<button class="apply-filters-btn" id="applyFilters">Apply Filters</button>
+							<button class="clear-filters-btn" id="clearFilters">Reset</button>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Properties Grid -->
+				<div class="col-lg-9 col-md-12 col-sm-12">
+					<div class="row clearfix" id="propertiesContainer">
+				
 				<!-- Property Block One -->
 				<div class="property-block_one style-three col-lg-4 col-md-6 col-sm-12">
 					<div class="property-block_one-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
@@ -225,6 +269,7 @@
 								<a class="property-block_one-heart" data-property-id="property3"><img src="assets/images/icons/heart.svg" alt="" /></a>
 							</div>
 						</div>
+					</div>
 					</div>
 				</div>
 				
@@ -514,6 +559,7 @@
 <script src="assets/js/jquery.countdown.js"></script>
 <script src="assets/js/element-in-view.js"></script>
 <script src="assets/js/favourites.js"></script>
+<script src="assets/js/property-filter.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
