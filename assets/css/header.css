@@ -1708,3 +1708,77 @@
 .about-sidebar .sidebar-inner::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Profile Photo Dropdown */
+.profile-dropdown {
+	position: relative;
+	margin-left: 20px;
+}
+
+.profile-photo {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 2px solid var(--color-three);
+	object-fit: cover;
+	transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+	border-color: var(--color-two);
+	transform: scale(1.05);
+}
+
+.profile-menu {
+	position: absolute;
+	top: 55px;
+	right: 0;
+	background: #fff;
+	min-width: 200px;
+	border-radius: 8px;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px);
+	transition: all 0.3s ease;
+	z-index: 999;
+	padding-top: 5px;
+}
+
+.profile-dropdown.active .profile-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.profile-menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.profile-menu ul li {
+	margin: 0;
+}
+
+.profile-menu ul li a {
+	display: block;
+	padding: 12px 20px;
+	color: #171B2A !important;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.profile-menu ul li a:hover {
+	background-color: #f8f8f8;
+	color: #eb2027 !important;
+	padding-left: 25px;
+}
+
+.profile-menu ul li a i {
+	margin-right: 10px;
+	color: var(--color-three);
+}
